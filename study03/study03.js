@@ -132,7 +132,7 @@
 
 
 
-
+//이 부분은 신경쓰지마라
 // quiz7Setup();
 // let quiz7 = quiz7Setup();
 // let money7 = quiz7.money;
@@ -140,61 +140,40 @@
 // quiz7End = quiz7CoffeeSale(money7,cAmount7);
 // console.log(quiz7End);
 
-
-function quiz7Setup(){
-    let money = prompt("가지고 있는 금액 입력하세요");
-    let coffee = 300;
-    let cAmount = 10;
-
-    return { 'money' : money, 'coffee' : coffee, 'cAmount' : cAmount };
-};
-
-function quiz7CoffeeSale(money7,cAmount7){
-    for(let i=1; ; i++){
-        if(money7>=300) {
-            if (cAmount7 <= 0) {
-                alert("커피가 다 팔렸습니다")
-                break;
-            }
-            alert("커피를 한 잔 판매합니다");
-            cAmount7--;
-            money7=money7-300;
-            alert(`남은 커피${cAmount7}잔`);
-        }
-        else{
-            alert("돈이 부족합니다");
-            break;
-        }
-    }
-}
-
-let quiz7 = quiz7Setup();
-let money7 = quiz7.money;
-let cAmount7 = quiz7.cAmount;
-
-quiz7CoffeeSale(money7,cAmount7);
-
-
-// let money = prompt("가지고 있는 금액 입력하세요");
-// let coffee = 300;
-// let cAmount = 10;
+//여기서부터!!
+// function quiz7Setup(){
+//     let money = prompt("가지고 있는 금액 입력하세요");
+//     let coffee = 300;
+//     let cAmount = 10;
 //
-// for(let i=1; ; i++){
-//     if(money>=300) {
-//         alert("커피를 한 잔 판매합니다");
-//         cAmount--;
-//         alert(`남은 커피${cAmount}잔`);
+//     return { 'money' : money, 'coffee' : coffee, 'cAmount' : cAmount };
+// };
 //
-//         if (cAmount == 0) {
-//             alert("커피가 다 팔렸습니다")
+// function quiz7CoffeeSale(money7,cAmount7){
+//     for(let i=1; ; i++){
+//         if(money7>=300) {
+//             if (cAmount7 <= 0) {
+//                 alert("커피가 다 팔렸습니다")
+//                 break;
+//             }
+//             alert("커피를 한 잔 판매합니다");
+//             cAmount7--;
+//             money7=money7-300;
+//             alert(`남은 커피${cAmount7}잔`);
+//         }
+//         else{
+//             alert("돈이 부족합니다");
 //             break;
 //         }
 //     }
-//     else{
-//        alert("돈이 부족합니다");
-//        break;
-//     }
 // }
+//
+// let quiz7 = quiz7Setup();
+// let money7 = quiz7.money;
+// let cAmount7 = quiz7.cAmount;
+//
+// // quiz7CoffeeSale(money7,cAmount7);
+// quiz7CoffeeSale(quiz7.money,quiz7.cAmount); // 이렇게 표현해도 된다.
 
 
 
@@ -205,50 +184,60 @@ quiz7CoffeeSale(money7,cAmount7);
 // 3. 출금 부분을 함수로 생성 quiz8OutputMoney
 
 
-
+// 여기서부터 주석 풀어
+// let menu = 0;
 // let account = 0;
 // let money = 0;
 // let minus = 0;
+// let quiz8Account = quiz8InMoney;
 //
-// for(;true;) {
+//  while(true){
 //
-//     let menu = prompt(`안녕하세요 java505 은행입니다
+//      menu = prompt(`안녕하세요 java505 은행입니다
 //     1: 입금, 2: 예금 확인, 3: 출금, 0: 종료`);
+//
 //     if (menu == 0) {
 //         alert("프로그램을 종료합니다");
 //         break;
 //     }
+//
 //     else if(menu == 1){
 //         quiz8InMoney();
 //     }
 //     else if(menu == 2){
-//         quiz8CheckMoney();
-//
+//         quiz8CheckMoney(quiz8Account);
 //     }
 //     else if(menu == 3){
-//         quiz8OutputMoney();
+//         quiz8OutputMoney(quiz8Account);
+//     }
+//     else{
+//         alert("잘못입력하셨습니다 다시 쳐주세요");
 //     }
 // }
 //
+//
 // function quiz8InMoney(){
-//     money = prompt("금액을 입력해주세요");
+//      money = prompt("금액을 입력해주세요");
 //     account+=Number(money);
 //     console.log(`계좌에 총 ${account}원이 들어있습니다`);
+//
+//     return account;
 // }
 //
-// function quiz8CheckMoney(){
+// function quiz8CheckMoney(quiz8Account){
 //     console.log(`계좌에 들어있는 잔고는 ${account}원 입니다`);
 // }
 //
-// function quiz8OutputMoney(){
+// function quiz8OutputMoney(quiz8Account){
 //     minus = prompt("원하시는 금액을 입력해주세요");
 //     if(minus>account){
 //         console.log(`${account}원이 출금되었습니다.`);
 //         account=0;
-//         continue;
 //     }
 //     else{
 //         console.log(`${minus}원이 출금되었습니다.`);
 //         account-=minus;
 //     }
 // }
+
+
